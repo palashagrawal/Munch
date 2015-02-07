@@ -10,7 +10,6 @@ var hostnameRegexp = new RegExp('^https?://.+?/');
 
 function initialize() {
   var marker;
-  directionsDisplay = new google.maps.DirectionsRenderer();
   function placeMarker(location) {
     if ( marker ) {
       marker.setPosition(location);
@@ -42,7 +41,6 @@ function initialize() {
     mapTypeId: google.maps.MapTypeId.ROADMAP
   }
   map = new google.maps.Map(document.getElementById('map-canvas'), myOptions);
-  directionsDisplay.setMap(map);
   places = new google.maps.places.PlacesService(map);
   google.maps.event.addListener(map, 'tilesloaded', tilesLoaded);
   
