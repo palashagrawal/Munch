@@ -32,7 +32,7 @@ function initialize() {
     // Browser doesn't support Geolocation
     handleNoGeolocation(false);
   }
-  var myLatlng = pos;
+  var myLatlng = new google.maps.LatLng(40,-87);
   var myOptions = {
     zoom: 15,
     center: myLatlng,
