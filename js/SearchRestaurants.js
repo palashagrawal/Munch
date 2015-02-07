@@ -1,3 +1,6 @@
+var directionsDisplay;
+var service;
+var directionsService = new google.maps.DirectionsService();
 var map, places, iw;
 var markers = [];
 var searchTimeout;
@@ -32,7 +35,7 @@ function initialize() {
     // Browser doesn't support Geolocation
     handleNoGeolocation(false);
   }
-  var myLatlng = new google.maps.LatLng(40,-87);
+  var myLatlng = pos;
   var myOptions = {
     zoom: 15,
     center: myLatlng,
